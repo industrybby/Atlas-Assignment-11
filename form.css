@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 0 1em;
+  color: #222;
+}
+
+h1 {
+  border-bottom: 2px solid #BB3D2F;
+  padding-bottom: .3em;
+}
+
+fieldset {
+  margin-bottom: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1em 1.5em;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 .5em;
+}
+
+label {
+  margin-right: .3em;
+  width: 6.3em; /* deliberately wide -- adjust to fit your longest label */
+  display: inline-block; /* width will not work for "inline" elements such as "label" */
+  text-align: right;
+}
+
+/* we place the id formcol1 in front of the li element in order to
+   limit this formatting to the top part of the form */
+#formcol1 li {
+  list-style: none;
+  margin-bottom: .6em;
+}
+
+/* Because we right-aligned the labels above, the radio-button labels
+   (which come AFTER their input) need their own rule so they aren't
+   squeezed to a fixed right-aligned width */
+#multchoice label {
+  width: auto;
+  text-align: left;
+  margin-left: .2em;
+  margin-right: 1.2em;
+}
+
+#multchoice span {
+  margin-right: .5em;
+}
+
+/* Highlight current keyboard and mouse focus */
+select:focus, select:active,
+input:focus, input:active,
+input:focus + label, input:active + label,
+label[for]:focus, label[for]:active {
+  color: #FFF !important;
+  background-color: #BB3D2F !important;
+}
+
+/* Use color (in addition to the asterisk) to cue required fields */
+#formcol1 input.reqfield {
+  background: #FF9;
+}
+
+button[type="submit"] {
+  margin-top: 1em;
+  padding: .5em 1.2em;
+  background-color: #BB3D2F;
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #8f2e23;
+}
